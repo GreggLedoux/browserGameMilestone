@@ -1,12 +1,9 @@
-@font-face {
-    font-family: Fredoka;
-    src: url(./FredokaOne-Regular.ttf);
-}
+
 
 html {
     width: 100%;
     height: 100%;
-    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    background: linear-gradient(325deg,  #ee51d9 0%,#1a37b6 50%,#ffb71b 100%);
     font-family: Fredoka;
 }
 
@@ -24,23 +21,23 @@ html {
 }
 
 button {
-    background: #282A3A;
+    background: #fa0808;
     color: #FFF;
     border-radius: 5px;
     padding: 10px 20px;
     border: 0;
     cursor: pointer;
-    font-family: Fredoka;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18pt;
 }
 
 .disabled {
-    color: #757575;
+    color: #130101;
 }
 
 .stats {
-    color: #FFF;
-    font-size: 14pt;
+    color: rgb(247, 241, 241);
+    font-size: 16pt;
 }
 
 .board-container {
@@ -51,7 +48,7 @@ button {
 .win {
     border-radius: 5px;
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-    background: linear-gradient(135deg,  #6f00fc 0%,#fc7900 50%,#fcc700 100%);
+    background: linear-gradient(135deg,  #02ff41 0%,#fc7900 50%,#d4eb04 100%);
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
 }
@@ -74,7 +71,7 @@ button {
 .card {
     position: relative;
     width: 100px;
-    height: 100px;
+    height: 130px;
     cursor: pointer;
 }
 
@@ -113,7 +110,7 @@ button {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: #FDF8E6;
+    background: #ffee00;
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
