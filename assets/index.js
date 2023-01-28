@@ -1,10 +1,10 @@
 const selectors = {
-    boardContainer: document.querySelector('.boardcontainer'),
+    boardContainer: document.querySelector('.board-container'),
     board: document.querySelector('.board'),
     moves: document.querySelector('.moves'),
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
-    win: document.querySelector('win')
+    win: document.querySelector('.win')
 }
 
 const state = {
@@ -20,7 +20,7 @@ const shuffle = array => {
 
     for (let index = clonedArray.length - 1; index > 0; index--) {
         const randomIndex = Math.floor(Math.random() * (index +1))
-        const original = clonedArray[randomIndex]
+        const original = clonedArray[index]
 
         clonedArray[index] = clonedArray[randomIndex]
         clonedArray[randomIndex] = original
@@ -82,7 +82,7 @@ const startGame = () => {
 }
 
 const flipBackCards = () => {
-    document.querySelectorAll('.card:not(.matched)'),forEach(card => {
+    document.querySelectorAll('.card:not(.matched)').forEach(card => {
         card.classList.remove('flipped')
     })
 
@@ -101,7 +101,7 @@ const flipCard = card => {
         card.classList.add('flipped')
     }
 
-    if (state.flippedCards +++2) {
+    if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
 
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
