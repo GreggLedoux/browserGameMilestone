@@ -3,8 +3,8 @@
 html {
     width: 100%;
     height: 100%;
-    background: linear-gradient(325deg,  #ee51d9 0%,#1a37b6 50%,#ffb71b 100%);
-    font-family: Fredoka;
+    background: linear-gradient(325deg,  #ee51d9 0%,#1a37b6 50%,#68eef3 100%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .game {
@@ -112,17 +112,22 @@ button {
     text-align: center;
     background: #ffee00;
     transform: rotateY(180deg) rotateZ(50deg);
+    background-color: #f7df0e;
+    opacity: 0.8;
+    background-image: radial-gradient(circle at center center, #ecf00a, #e5e5f7), repeating-radial-gradient(circle at center center, #121772, #444cf7, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
 }
+
 
 .win-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 21pt;
-    color: #282A3A;
+    font-size: 40pt;
+    color: #f8f6f8;
 }
 
 .highlight {
-    color: #6f00fc;
+    color: #0af7eb;
 }

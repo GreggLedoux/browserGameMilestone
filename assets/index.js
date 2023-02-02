@@ -113,8 +113,8 @@ const flipCard = card => {
             flipBackCards()
         }, 1000)
     }
-
-
+   
+    
     if (!document.querySelectorAll('.card:not(.flipped)').length) {
         setTimeout(() => {
             selectors.boardContainer.classList.add('flipped')
@@ -125,7 +125,7 @@ const flipCard = card => {
             under <span class="highlight">${state.totalTime}</span> seconds
             </span>
             `
-
+            
             clearInterval(state.loop)
         }, 1000)
     }
