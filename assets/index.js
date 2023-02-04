@@ -7,6 +7,13 @@ const selectors = {
     win: document.querySelector('.win')
 }
 
+
+
+function playSound () {
+    let winSound = new Audio('assets\winning-82808.mp3');
+    winSound.play();
+}
+
 const state = {
     gameStarted: false,
     flippedCards: 0,
@@ -114,7 +121,8 @@ const flipCard = card => {
         }, 1000)
     }
    
-    
+  
+
     if (!document.querySelectorAll('.card:not(.flipped)').length) {
         setTimeout(() => {
             selectors.boardContainer.classList.add('flipped')
@@ -125,11 +133,13 @@ const flipCard = card => {
             under <span class="highlight">${state.totalTime}</span> seconds
             </span>
             `
-            
-            clearInterval(state.loop)
+           
+            clearInterval(state.loop);
         }, 1000)
     }
-}
+} 
+
+
 
 const attachEventListeners = ()=> {
     document.addEventListener('click', event => {
@@ -138,6 +148,7 @@ const attachEventListeners = ()=> {
 
         if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
             flipCard(eventParent)
+            playSound();
         } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
             startGame()
         }
@@ -146,4 +157,3 @@ const attachEventListeners = ()=> {
 
 generateGame()
 attachEventListeners()
-
