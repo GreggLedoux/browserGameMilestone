@@ -8,12 +8,6 @@ const selectors = {
 }
 
 
-
-function playSound () {
-    let winSound = new Audio('assets\winning-82808.mp3');
-    winSound.play();
-}
-
 const state = {
     gameStarted: false,
     flippedCards: 0,
@@ -133,8 +127,8 @@ const flipCard = card => {
             under <span class="highlight">${state.totalTime}</span> seconds
             </span>
             `
-           
-            clearInterval(state.loop);
+            
+            clearInterval(state.loop)
         }, 1000)
     }
 } 
@@ -145,10 +139,8 @@ const attachEventListeners = ()=> {
     document.addEventListener('click', event => {
         const eventTarget = event.target
         const eventParent = eventTarget.parentElement
-
         if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
             flipCard(eventParent)
-            playSound();
         } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
             startGame()
         }
